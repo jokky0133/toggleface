@@ -1,0 +1,64 @@
+/* styles.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.face-button {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background-color: #ffeb3b;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.face-button:before, .face-button:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  top: 30px;
+}
+
+.face-button:before {
+  left: 25px;
+}
+
+.face-button:after {
+  right: 25px;
+}
+
+.face-button.happy .mouth {
+  width: 60px;
+  height: 30px;
+  border-radius: 0 0 50% 50%;
+  border: 3px solid #333;
+  border-top: none;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.face-button.sad .mouth {
+  width: 60px;
+  height: 30px;
+  border-radius: 50% 50% 0 0;
+  border: 3px solid #333;
+  border-bottom: none;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
